@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">HI-View-Demo</string>
     <string name="button_name">My button</string>
+    <string name="color.red">Red</string>
+    <string name="color.orange">Orange</string>
+    <string name="color.yellow">Yellow</string>
+    <string name="color.green">Green</string>
+    <string name="color.cyan">Cyan</string>
+    <string name="color.blue">Blue</string>
+    <string name="color.purple">Purple</string>
 </resources>
