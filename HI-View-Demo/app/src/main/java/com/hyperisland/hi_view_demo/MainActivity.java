@@ -44,15 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        awesomeView = findViewById(R.id.awesomeView);
-        myButton = (Button) findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                awesomeView.setBackgroundColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
-            }
-        });
-
         awesomeText = (TextView) findViewById(R.id.awesomeText);
         myButton = (Button) findViewById(R.id.myButton);
         myButton.setOnClickListener(new View.OnClickListener() {
