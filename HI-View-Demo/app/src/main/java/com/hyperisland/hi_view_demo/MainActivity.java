@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import java.util.Random;
 
@@ -12,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button myButton;
     private View awesomeView;
-    private TextView awesomeText;
 
     private static int[] colors = {
             R.color.red,
@@ -41,24 +39,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 awesomeView.setBackgroundColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
-            }
-        });
-
-        awesomeView = findViewById(R.id.awesomeView);
-        myButton = (Button) findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                awesomeView.setBackgroundColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
-            }
-        });
-
-        awesomeText = (TextView) findViewById(R.id.awesomeText);
-        myButton = (Button) findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                awesomeText.setTextColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
             }
         });
     }
