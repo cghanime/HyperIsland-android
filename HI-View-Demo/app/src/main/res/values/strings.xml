@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">HI-View-Demo</string>
-    <string name="button_name">My button</string>
+    <string name="app_name">Changing Colours</string>
+    <string name="rand_btn">Random</string>
+    <string name="order_btn">Order</string>
+    <string name="reset">Reset</string>
     <string name="color.red">Red</string>
     <string name="color.orange">Orange</string>
     <string name="color.yellow">Yellow</string>

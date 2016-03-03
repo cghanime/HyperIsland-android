@@ -10,9 +10,11 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button myButton;
+    private Button rand_btn;
     private View awesomeView;
     private TextView awesomeText;
+    private Button order_btn;
+    private Button reset;
 
     private static int[] colors = {
             R.color.red,
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private Random random;
+    private int index = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,20 +39,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void initUI() {
         awesomeView = findViewById(R.id.awesomeView);
-        myButton = (Button) findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
+        awesomeText = (TextView) findViewById(R.id.awesomeText);
+        rand_btn = (Button) findViewById(R.id.rand_btn);
+        order_btn = (Button) findViewById(R.id.order_btn);
+        reset = (Button) findViewById(R.id.reset);
+        rand_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 awesomeView.setBackgroundColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
+                awesomeText.setTextColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
             }
         });
 
-        awesomeText = (TextView) findViewById(R.id.awesomeText);
-        myButton = (Button) findViewById(R.id.myButton);
-        myButton.setOnClickListener(new View.OnClickListener() {
+        order_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { index++;
+                awesomeView.setBackgroundColor(MainActivity.this.getResources().getColor(colors[index % colors.length]));
+                awesomeText.setTextColor(MainActivity.this.getResources().getColor(colors[index % colors.length]));
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                awesomeText.setTextColor(MainActivity.this.getResources().getColor(colors[random.nextInt(colors.length)]));
+                int white = 0;
+                awesomeView.setBackgroundColor(white);
+                awesomeText.setTextColor(white);
             }
         });
     }
